@@ -1,0 +1,48 @@
+﻿body{
+    margin-top: 5px;
+    margin: 0 auto;
+    font-family: "AppleGothic";
+    text-align:center;
+}
+
+form{
+    margin: 0 auto;
+    width: 400px;
+    padding: 5px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #888888;
+    text-align:center;
+
+
+
+    
+}
+
+/*#loginform
+{
+ margin: 0 auto;
+    width: 1000px;
+    padding: 5px;
+    border: 1px solid #CCCCCC;
+    box-shadow: 5px 5px 5px #888888;
+    text-align:center;
+    background-color:aliceblue;
+}*/
+
+
+
+#errorMsgArea
+{
+    float: left;
+    width: 30%;
+    overflow: hidden;
+    margin-left: 20px;
+}
+#errorMsgArea span
+{
+    display: inline-block;
+    padding-top: 6px;
+    color: red;
+}
+

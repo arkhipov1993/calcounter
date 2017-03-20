@@ -1,0 +1,77 @@
+﻿body {
+    font-family: 'Roboto Condensed', sans-serif;
+	background-image: linear-gradient(to left, rgb(178, 69, 146), rgb(241, 95, 121));
+    background-attachment: fixed; 
+    
+}
+p {
+    
+    font-size: 1em;
+    color: #fff;
+    margin: 1.5em 0 .5em; 
+	font-weight: 600;
+}
+h1 {
+    font-size: 2.8em;
+    text-align: center;
+    color: #fff;
+    font-weight: 100; 
+	margin-bottom: 1em;
+
+}
+
+form {
+    margin: 0 auto;
+    width: 400px;
+    padding: 5px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #888888;
+    text-align:center;
+
+    
+    background: #222430;
+    padding: 2.5em;
+    background-size:auto;
+   display: block;
+    text-align: center; 
+    font-size: 1em;
+    color: #fff;
+}
+
+#Button1,#Button2, #Button3, #Button4 {
+    font-size: 1em;
+    color: #fff;
+    background: #F44336;
+    border: 1px solid #F44336;
+    outline: none;
+    cursor: pointer;
+    padding: .6em 1em;
+    -webkit-appearance: none;
+    width: 100%;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px; 
+    margin-top: 4em; 
+}
+
+#Reset1 {
+    font-size: 1em;
+    color: #fff;
+    background: #F44336;
+    border: 1px solid #F44336;
+    outline: none;
+    cursor: pointer;
+    padding: .6em 1em;
+    -webkit-appearance: none;
+    width: 100%;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px; 
+    margin-top: 1em; 
+}
+
