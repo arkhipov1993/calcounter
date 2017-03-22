@@ -20,13 +20,13 @@ public partial class addCal : System.Web.UI.Page
         if (Session["Username"] != null)
         {
             Label1.Text = "Session was created successfully!";
-            string connectionString = "Database=acsm_1c8d208942ba5c9;Data Source=ca-cdbr-azure-east-a.cloudapp.net;User Id=bfbef46d9ab76f;Password=28bcf9c1";
+            string connectionString = "Database=bh62044_calcounter;Data Source=91.219.194.4;User Id=bh62044_evgeny;Password=admin12345678";
             MySqlConnection conn = new MySqlConnection(connectionString);
             MySqlCommand command = conn.CreateCommand();
 
 
 
-            command.CommandText = @"SELECT productName FROM products;";
+            command.CommandText = @"SELECT productName FROM bh62044_calcounter.products;";
             conn.Open();
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
@@ -62,10 +62,10 @@ public partial class addCal : System.Web.UI.Page
     }
     protected void Button2_Click(object sender, EventArgs e)
     {
-        string connectionString = "Database=acsm_1c8d208942ba5c9;Data Source=ca-cdbr-azure-east-a.cloudapp.net;User Id=bfbef46d9ab76f;Password=28bcf9c1";
+        string connectionString = "Database=bh62044_calcounter;Data Source=91.219.194.4;User Id=bh62044_evgeny;Password=admin12345678";
         MySqlConnection conn = new MySqlConnection(connectionString);
         MySqlCommand command = conn.CreateCommand();
-        command.CommandText = @"SELECT * FROM products WHERE productName='" + DropDownList1.Text + "';";
+        command.CommandText = @"SELECT * FROM bh62044_calcounter.products WHERE productName='" + DropDownList1.Text + "';";
         conn.Open();
         MySqlDataReader reader = command.ExecuteReader();
         reader.Read();
@@ -76,7 +76,7 @@ public partial class addCal : System.Web.UI.Page
         //code above works
 
 
-        command.CommandText = @"SELECT * FROM logins WHERE email='" + Session["username"] + "';";
+        command.CommandText = @"SELECT * FROM bh62044_calcounter.logins WHERE email='" + Session["username"] + "';";
         reader=command.ExecuteReader();
        // command.ExecuteNonQuery();
         reader.Read();
@@ -87,7 +87,7 @@ public partial class addCal : System.Web.UI.Page
         Label1.Text = calConsumed.ToString();
         reader.Close();
 
-        command.CommandText = @"UPDATE logins SET calConsumed=" + calConsumed + " WHERE email='" + Session["Username"] + "';";
+        command.CommandText = @"UPDATE bh62044_calcounter.logins SET calConsumed=" + calConsumed + " WHERE email='" + Session["Username"] + "';";
         reader = command.ExecuteReader();
         reader.Close();
 

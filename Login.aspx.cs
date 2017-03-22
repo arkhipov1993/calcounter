@@ -17,13 +17,13 @@ public partial class Login : System.Web.UI.Page
     protected void Button1_Click(object sender, EventArgs e)
     {
         bool checkUser = false;
-        string connectionString = "Database=acsm_1c8d208942ba5c9;Data Source=ca-cdbr-azure-east-a.cloudapp.net;User Id=bfbef46d9ab76f;Password=28bcf9c1";
+        string connectionString = "Database=bh62044_calcounter;Data Source=91.219.194.4;User Id=bh62044_evgeny;Password=admin12345678";
         MySqlConnection conn = new MySqlConnection(connectionString);
         MySqlCommand command = conn.CreateCommand();
         
             //try
             //{
-                command.CommandText = @"SELECT * FROM logins WHERE email = '" + TextBox1.Text + "' AND password = '" + TextBox2.Text + "';";
+                command.CommandText = @"SELECT * FROM bh62044_calcounter.logins WHERE email = '" + TextBox1.Text + "' AND password = '" + TextBox2.Text + "';";
                 conn.Open();
                 string userEmail = "";
                 string userPass = "";

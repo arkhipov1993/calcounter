@@ -24,10 +24,10 @@ public partial class CalCounter : System.Web.UI.Page
             int calConsumed;
 
             Label1.Text = "Hello, welcome to the Calories counter!";
-            string connectionString = "Database=acsm_1c8d208942ba5c9;Data Source=ca-cdbr-azure-east-a.cloudapp.net;User Id=bfbef46d9ab76f;Password=28bcf9c1";
+            string connectionString = "Database=bh62044_calcounter;Data Source=91.219.194.4;User Id=bh62044_evgeny;Password=admin12345678";
             MySqlConnection conn = new MySqlConnection(connectionString);
             MySqlCommand command = conn.CreateCommand();
-            command.CommandText = @"SELECT * FROM logins WHERE email='"+Session["Username"]+"';";
+            command.CommandText = @"SELECT * FROM bh62044_calcounter.logins WHERE email='" + Session["Username"] + "';";
             conn.Open();
             MySqlDataReader reader = command.ExecuteReader();
             reader.Read();
@@ -54,7 +54,7 @@ public partial class CalCounter : System.Web.UI.Page
                     result = (10 * weight + 6 * height - 5 * age - 161)*2;
                     calLeft=result;
                     TextBox1.Text = Convert.ToString(result);
-                    command.CommandText = @"UPDATE logins SET calLeft=" + TextBox1.Text + " WHERE email='" + Session["Username"] + "';";
+                    command.CommandText = @"UPDATE bh62044_calcounter.logins SET calLeft=" + TextBox1.Text + " WHERE email='" + Session["Username"] + "';";
                     reader.Close();
                     command.ExecuteNonQuery();
                     //reader.Read();
@@ -64,7 +64,7 @@ public partial class CalCounter : System.Web.UI.Page
                    result = (10 * weight + 5 * height - 5 * age - 161)*2-300;
                    calLeft = result;
                    TextBox1.Text = Convert.ToString(result);
-                   command.CommandText = @"UPDATE logins SET calLeft=" + TextBox1.Text + " WHERE email='" + Session["Username"] + "';";
+                   command.CommandText = @"UPDATE bh62044_calcounter.logins SET calLeft=" + TextBox1.Text + " WHERE email='" + Session["Username"] + "';";
                    reader.Close();
                    command.ExecuteNonQuery();
                    //reader.Read();
@@ -76,7 +76,7 @@ public partial class CalCounter : System.Web.UI.Page
                    result = (10 * weight + 6 * height - 5 * age - 161)+550;
                    calLeft = result;
                    TextBox1.Text = Convert.ToString(result);
-                   command.CommandText = @"UPDATE logins SET calLeft=" + TextBox1.Text + " WHERE email='" + Session["Username"] + "';";
+                   command.CommandText = @"UPDATE bh62044_calcounter.logins SET calLeft=" + TextBox1.Text + " WHERE email='" + Session["Username"] + "';";
                    reader.Close();
                    command.ExecuteNonQuery();
                }

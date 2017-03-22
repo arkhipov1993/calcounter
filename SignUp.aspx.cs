@@ -24,7 +24,7 @@ public partial class SignUp : System.Web.UI.Page
         string height = TextBox8.Text;
         string purpose = DropDownList1.Text;
         string stringConnection;
-        stringConnection = "Database=acsm_1c8d208942ba5c9;Data Source=ca-cdbr-azure-east-a.cloudapp.net;User Id=bfbef46d9ab76f;Password=28bcf9c1";
+        stringConnection = "Database=bh62044_calcounter;Data Source=91.219.194.4;User Id=bh62044_evgeny;Password=admin12345678";
         using (MySqlConnection conn = new MySqlConnection(stringConnection))
         {
             string request = "INSERT INTO logins(firstName, lastName, email, password, age, weight, height, purpose) VALUES (@firstName, @lastName, @email, @password, @age, @weight, @height, @purpose)";

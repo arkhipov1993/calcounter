@@ -23,10 +23,10 @@ public partial class EditAccount : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-        string connectionString = "Database=acsm_1c8d208942ba5c9;Data Source=ca-cdbr-azure-east-a.cloudapp.net;User Id=bfbef46d9ab76f;Password=28bcf9c1";
+        string connectionString = "Database=bh62044_calcounter;Data Source=91.219.194.4;User Id=bh62044_evgeny;Password=admin12345678";
         MySqlConnection conn = new MySqlConnection(connectionString);
         MySqlCommand command = conn.CreateCommand();
-        command.CommandText = @"UPDATE logins SET age=" + TextBox6.Text + ",weight="+TextBox7.Text+",height="+TextBox8.Text+",purpose='"+DropDownList1.SelectedValue+"' WHERE email='" + Session["Username"] + "';";
+        command.CommandText = @"UPDATE bh62044_calcounter.logins SET age=" + TextBox6.Text + ",weight=" + TextBox7.Text + ",height=" + TextBox8.Text + ",purpose='" + DropDownList1.SelectedValue + "' WHERE email='" + Session["Username"] + "';";
         conn.Open();
         command.ExecuteNonQuery();
         conn.Close();
